@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.church_si.ui.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.example.church_si.ui.AboutFragment"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/navigation_videos"
+        android:name="com.example.church_si.ui.VideosFragment"
+        tools:layout="@layout/fragment_videos" />
+
+    <fragment
+        android:id="@+id/navigation_dailyPromises"
+        android:name="com.example.church_si.ui.DailyPromisesFragment"
+        tools:layout="@layout/fragment_daily_promises" />
+
+    <fragment
+        android:id="@+id/navigation_contactUs"
+        android:name="com.example.church_si.ui.ContactUsFragment"
+        tools:layout="@layout/fragment_contact_us" />
+
+    <fragment
+        android:id="@+id/navigation_prayerRequest"
+        android:name="com.example.church_si.ui.PrayerRequestFragment"
+        tools:layout="@layout/fragment_prayer_request" />
+
+
+
+
+</navigation>

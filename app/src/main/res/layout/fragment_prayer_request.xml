@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/register_bg"
+        tools:context=".activity.RegisterActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp80"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/white_cardbg">
+
+
+                <TextView
+                    android:id="@+id/txt_reg_here"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Title1"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="Prayer Request"
+                    android:layout_marginStart="@dimen/dp16"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp40"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp35"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/username"
+                        android:background="@drawable/input_reg_bg"
+                        android:hint="Name"
+                        android:padding="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:importantForAutofill="no"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="Mobile Number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp35"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mobile_no"
+                        android:background="@drawable/input_reg_bg"
+                        android:hint="Mobile number"
+                        android:padding="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:inputType="number"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="Email Id"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp35"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/email"
+                        android:background="@drawable/input_reg_bg"
+                        android:hint="email"
+                        android:padding="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:inputType="textEmailAddress"
+                        android:importantForAutofill="no"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="Prayer For"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp35"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/subscribeNo"
+                        android:background="@drawable/input_reg_bg"
+                        android:hint="Subscription Number"
+                        android:padding="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:inputType="textEmailAddress"
+                        android:importantForAutofill="no"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="For Your Request"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp35"
+                    app:hintEnabled="false"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/pwd"
+                        android:background="@drawable/input_reg_bg"
+                        android:hint="request"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:inputType="textMultiLine"
+                        android:layout_gravity="start"
+                        android:gravity="top"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp110"
+                    android:layout_height="@dimen/dp80"
+                    android:id="@+id/btn_submit"
+                    app:srcCompat="@drawable/reg_submit_btn"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_gravity="end"/>
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

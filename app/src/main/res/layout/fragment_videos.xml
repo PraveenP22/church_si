@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/register_bg"
+    tools:context=".ui.VideosFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp70"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_cardbg"
+            android:padding="@dimen/dp12"
+            >
+
+            <TextView
+                android:id="@+id/sermonsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Title1"
+                android:text="Sermons"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+            <RelativeLayout
+                android:id="@+id/ytVideoLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_round"
+                app:layout_constraintTop_toBottomOf="@+id/sermonsHeader"
+                android:padding="@dimen/dp8">
+                <TextView
+                    android:id="@+id/sermonsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Headline"
+                    android:text="Sunday Sermons"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_below="@id/sermonsTitle"
+                    android:id="@+id/ytvideoRcview"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/yt_video_listitem"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shortVideoLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_round"
+                app:layout_constraintTop_toBottomOf="@+id/ytVideoLay"
+                android:padding="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp20">
+                <TextView
+                    android:id="@+id/shortTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Headline"
+                    android:text="Short Videos"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_below="@id/shortTitle"
+                    android:id="@+id/shortvideoRcview"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/shortvideos_listitem"/>
+
+            </RelativeLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

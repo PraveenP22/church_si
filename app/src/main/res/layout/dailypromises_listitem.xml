@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/stroke_bg_round"
+    android:layout_margin="@dimen/dp5"
+    android:padding="@dimen/dp8"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/topLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/mailImg"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp5"
+            android:src="@drawable/mail_icon"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Caption1"
+            android:text="Monday, 28 August 2023"
+            android:layout_toRightOf="@id/mailImg"
+            android:paddingStart="@dimen/dp8"
+            android:paddingEnd="@dimen/dp5"
+            android:paddingTop="@dimen/dp5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Callout"
+            android:text="Monday, 28 August 2023"
+           android:layout_below="@id/date"
+            android:layout_toRightOf="@id/mailImg"
+            android:paddingStart="@dimen/dp8"
+            android:paddingEnd="@dimen/dp5"
+            android:paddingTop="@dimen/dp5"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/downloadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp8"
+        app:layout_constraintTop_toBottomOf="@id/topLay"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/dIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/download_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Caption1"
+            android:text="Download"
+            android:layout_toRightOf="@id/dIcon"
+            android:paddingStart="@dimen/dp5"
+            android:paddingEnd="@dimen/dp5"
+            android:paddingTop="@dimen/dp5"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp8"
+        app:layout_constraintTop_toBottomOf="@id/topLay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/downloadButton">
+
+        <ImageView
+            android:id="@+id/sIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Caption1"
+            android:text="Share"
+            android:layout_toRightOf="@id/sIcon"
+            android:paddingStart="@dimen/dp5"
+            android:paddingEnd="@dimen/dp5"
+            android:paddingTop="@dimen/dp5"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp10"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/catImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp120"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/jesus"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:shapeAppearance="@style/customRoundedImageView"/>
+
+    <TextView
+        android:id="@+id/catName"
+        style="@style/CalloutRegular"
+        app:layout_constraintTop_toBottomOf="@id/catImg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Lorem ipsum"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingStart="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,22 +1,26 @@
 package com.example.church_si.api
 
 import com.android.volley.Request
+import com.example.church_si.BuildConfig
 
 class AppConstants {
-    val BASE_URL: String = BuildConfig.BASE_URL
+    companion object {
 
+        val BASE_URL: String = BuildConfig.BASE_URL
 
-    val APPLICATION_FORMURL = "application/x-www-form-urlencoded"
-    val APPLICATION_JSON = "application/json"
-    var GET = Request.Method.GET
-    var POST = Request.Method.POST
-    var PUT = Request.Method.PUT
-    var DELETE = Request.Method.DELETE
+        const val jwtverify = ""
+        const val jwtrefresh = ""
 
-    val playstoreLink = "https://play.google.com/store/apps/details?id=com.izamedia.hz"
+        const val APPLICATION_FORMURL = "application/x-www-form-urlencoded"
+        const val APPLICATION_JSON = "application/json"
+        const val APP_SOURCE = "Android Customer Mobile Application"
+        const val APP_MODE = "ANDROID_APP"
+        var GET = Request.Method.GET
+        var POST = Request.Method.POST
+        var PUT = Request.Method.PUT
+        var DELETE = Request.Method.DELETE
 
-    val faq = "api/store-finder/ajax/faq/"
-    val store_finder = "api/store-finder/"
+        const val login = "api/login"
 
-
+    }
 }

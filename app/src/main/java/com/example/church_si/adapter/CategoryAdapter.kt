@@ -1,36 +1,36 @@
 package com.example.church_si.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.church_si.R
+import com.example.church_si.databinding.CategoryListitemBinding
 
-class CategoryAdapter() : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+class CategoryAdapter(private val catList: ArrayList<String>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     // create new views
+    private var context: Context? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // inflates the card_view_design view
-        // that is used to hold list item
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.category_listitem, parent, false)
-
-        return ViewHolder(view)
+        val binding =
+            CategoryListitemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        context = parent.context
+        return ViewHolder(binding)
     }
 
-    // binds the list items to a view
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-
+    override fun onBindViewHolder(holder: CategoryAdapter.ViewHolder, position: Int) {
+       holder.binding.catName.text = catList[position]
+        Glide.with(context!!).load(R.drawable.jesus).into(holder.binding.catImg)
     }
 
-    // return the number of the items in the list
     override fun getItemCount(): Int {
-        return 4
+      return catList.size
     }
 
-    // Holds the views for adding it to image and text
-    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
 
-    }
+
+    class ViewHolder(var binding: CategoryListitemBinding) : RecyclerView.ViewHolder(binding.root)
 }

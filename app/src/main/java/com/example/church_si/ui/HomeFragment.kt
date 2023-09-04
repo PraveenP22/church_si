@@ -25,6 +25,7 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private var imagesList = ArrayList<Int>()
+    private var catList = ArrayList<String>()
     private lateinit var viewPagerAdapter:ImageSlideAdapter
     private  var viewpager:ViewPager?=null
     private  var indicator:CircleIndicator?=null
@@ -41,16 +42,24 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        imagesList.add(R.drawable.church1);
-        imagesList.add(R.drawable.church2);
+        imagesList.clear()
+        catList.clear()
+        imagesList.add(R.drawable.church1)
+        imagesList.add(R.drawable.church2)
+        catList.add("Daily Promise Verse")
+        catList.add("Sermons")
+        catList.add("About Church")
+        catList.add("Prayer Request")
+        catList.add("Offering")
+        catList.add("Upcoming Program")
         var mNoOfColumns = CommonFunctions.calculateNoOfColumns(requireActivity())
         val mGridLayoutManager =  GridLayoutManager(requireActivity(), mNoOfColumns);
         binding.cateRc.layoutManager = mGridLayoutManager
-        binding.cateRc.adapter = CategoryAdapter()
+        binding.cateRc.adapter = CategoryAdapter(catList)
         binding.videosRc.adapter = VideosAdapter()
 
 
-        imagesList?.let{
+        imagesList.let{
             viewPagerAdapter = ImageSlideAdapter(requireContext(), it)
             binding.viewpager.adapter = viewPagerAdapter
             binding.indicator?.setViewPager(viewpager)

@@ -8,13 +8,13 @@
 
     <item
         android:id="@+id/navigation_dailyPromises"
-        android:icon="@drawable/schedule_icon"
-        android:title="@string/title_schedule" />
+        android:icon="@drawable/sign"
+        android:title="Daily Promises" />
 
     <item
         android:id="@+id/navigation_videos"
-        android:icon="@drawable/history_icon"
-        android:title="@string/title_history" />
+        android:icon="@drawable/tribune"
+        android:title="Sermons" />
 
     <item
         android:id="@+id/navigation_profile"

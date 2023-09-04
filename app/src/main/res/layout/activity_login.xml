@@ -53,6 +53,7 @@
         android:gravity="center"
         app:hintEnabled="false"
         app:hintAnimationEnabled="false"
+        app:boxStrokeWidthFocused="@dimen/dp0"
 
 
         >
@@ -110,6 +111,8 @@
         app:hintAnimationEnabled="false"
         app:passwordToggleEnabled="true"
         app:endIconTint="@color/white"
+        app:boxStrokeWidthFocused="@dimen/dp0"
+
 
         >
         <com.google.android.material.textfield.TextInputEditText

@@ -6,7 +6,12 @@ import android.location.LocationManager
 import android.util.Patterns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.example.church_si.R
 import com.google.android.material.snackbar.Snackbar
 import java.util.regex.Pattern
@@ -16,7 +21,8 @@ class CommonFunctions {
     companion object{
         var authToken = ""
         var accessToken = ""
-
+        private var fragmentManager: FragmentManager? = null
+        var dialogDismissed = false
          fun isValidEmail(email: String): Boolean {
             return Patterns.EMAIL_ADDRESS.matcher(email).matches()
         }
@@ -66,6 +72,26 @@ class CommonFunctions {
             return (screenWidthDp / 190 + 0.5).toInt()
         }
 
+        fun showTProgress(context: Context) {
+            fragmentManager = (context as AppCompatActivity).supportFragmentManager
+            val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
+            val newFragment: DialogFragment = LottieDialogFragment.newInstance()!!
+            dialogDismissed = false
+            newFragment.isCancelable = false
+            newFragment.show(ft, "dialog")
+        }
+
+        fun dismissTProgress(context: Context) {
+            dialogDismissed = true
+            val prev = fragmentManager!!.findFragmentByTag("dialog")
+            if (!fragmentManager!!.isStateSaved) {
+                if (prev != null) {
+                    val df = prev as LottieDialogFragment?
+                    df?.dismiss()
+                    fragmentManager!!.beginTransaction().remove(prev).commitAllowingStateLoss()
+                }
+            }
+        }
 
 
     }

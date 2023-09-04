@@ -10,7 +10,7 @@ import com.android.volley.toolbox.ImageLoader
 import com.android.volley.toolbox.Volley
 
 open class AppController : Application() {
-    private val TAG: String = AppController::class.java.getSimpleName()
+    private val TAG: String = AppController::class.java.simpleName
 
     private var mRequestQueue: RequestQueue? = null
     private var mImageLoader: ImageLoader? = null
@@ -47,12 +47,12 @@ open class AppController : Application() {
 
     fun <T> addToRequestQueue(req: Request<T>, tag: String?) {
         // set the default tag if tag is empty
-        req.setTag(if (TextUtils.isEmpty(tag)) TAG else tag)
+        req.tag = if (TextUtils.isEmpty(tag)) TAG else tag
         getRequestQueue()?.add(req)
     }
 
     fun <T> addToRequestQueue(req: Request<T>) {
-        req.setTag(TAG)
+        req.tag = TAG
         getRequestQueue()?.add(req)
     }
 

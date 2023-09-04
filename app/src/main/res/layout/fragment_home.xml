@@ -50,7 +50,7 @@
 
             <TextView
                 android:id="@+id/catHeader"
-                style="@style/Title2"
+                style="@style/Callout"
                 android:text="Category"
                 app:layout_constraintTop_toBottomOf="@id/viewpagerLay"
                 android:textColor="@color/blue_dark"
@@ -71,8 +71,8 @@
 
             <TextView
                 android:id="@+id/videoHeader"
-                style="@style/Title2"
-                android:text="Videos"
+                style="@style/Callout"
+                android:text="Recent Videos"
                 app:layout_constraintTop_toBottomOf="@id/cate_rc"
                 android:textColor="@color/blue_dark"
                 android:textStyle="bold"

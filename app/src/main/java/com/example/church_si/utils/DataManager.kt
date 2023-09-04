@@ -14,11 +14,12 @@ class DataManager(private val context: Context) {
     // Create some keys we will use them to store and retrieve the data
     companion object {
         val PREFERENCE_NAME = "MyDataStore"
-        val NAME_USER_KEY = "NAME"
+        val Name = "NAME"
+        val Token = "TOKEN"
+        val Mobile = "MOBILE"
+        //Instance of DataStore
+        val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = PREFERENCE_NAME)
     }
-
-    //Instance of DataStore
-    val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = PREFERENCE_NAME)
 
     /**
      * Add string data to data Store

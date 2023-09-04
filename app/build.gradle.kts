@@ -104,7 +104,7 @@ dependencies {
     implementation("androidx.multidex:multidex:2.0.1")
     //retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.google.code.gson:gson:2.9.0")
+    implementation ("com.google.code.gson:gson:2.10.1")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.4.1")
 
@@ -133,5 +133,6 @@ dependencies {
     //CircleIndicator
     implementation ("me.relex:circleindicator:2.1.6")
 
-
+    //lottify
+    implementation ("com.airbnb.android:lottie:4.1.0")
 }

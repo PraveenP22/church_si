@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/catName"
-        style="@style/CalloutRegular"
+        style="@style/Caption1"
         app:layout_constraintTop_toBottomOf="@id/catImg"
         app:layout_constraintStart_toStartOf="parent"
         android:text="Lorem ipsum"

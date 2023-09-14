@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
             CommonFunctions.showerrorsnackbar("Enter password",this,view)
         }else{
             CoroutineScope(Dispatchers.Main).launch {
-                viewModel.getaboutusApi(this@LoginActivity,view,AppConstants.login,binding.username.text.toString(),binding.password.text.toString())!!
+                viewModel.postLoginApi(this@LoginActivity,view,AppConstants.login,binding.username.text.toString(),binding.password.text.toString())!!
                     .observe(/* owner = */ this@LoginActivity) {it
                         if(it?.status == 200){
                             GlobalScope.launch {

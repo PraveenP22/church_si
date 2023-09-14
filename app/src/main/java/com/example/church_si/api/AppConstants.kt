@@ -21,6 +21,7 @@ class AppConstants {
         var DELETE = Request.Method.DELETE
 
         const val login = "api/login"
+        const val register = "api/register"
 
     }
 }
